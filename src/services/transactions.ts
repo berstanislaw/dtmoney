@@ -3,7 +3,7 @@ import { AnyFactories, AnyModels } from "miragejs/-types"
 
 export default function(server : Server<Registry<AnyModels, AnyFactories>>) {
   server.get('/transactions', () => {
-    return server.schema.all('transactions')
+    return server.schema.all('transaction')
   })
 
   server.post('/transactions', (schema, request) => {

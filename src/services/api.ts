@@ -8,6 +8,29 @@ export const mirage = createServer({
     transaction: Model,
   },
 
+  seeds(server) {
+    server.db.loadData({
+      transactions: [
+        {
+          id: 1,
+          title: 'Freela',
+          type: 'deposit',
+          category: 'Dev',
+          amount: 6000,
+          createdAt: new Date(),
+        },
+        {
+          id: 2,
+          title: 'Aluguel',
+          category: 'Casa',
+          type: 'withdraw',
+          amount: 6000,
+          createdAt: new Date(),
+        },
+      ],
+    })
+  },
+
   routes() {
     this.namespace = 'api'
     transactionsRoutes(this)
