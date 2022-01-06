@@ -17,7 +17,7 @@ export const mirage = createServer({
           type: 'deposit',
           category: 'Dev',
           amount: 6000,
-          createdAt: new Date(),
+          createdAt: new Date('2021-12-31 09:00:00'),
         },
         {
           id: 2,
@@ -25,7 +25,7 @@ export const mirage = createServer({
           category: 'Casa',
           type: 'withdraw',
           amount: 6000,
-          createdAt: new Date(),
+          createdAt: new Date('2021-12-31 09:00:00'),
         },
       ],
     })
